@@ -1,5 +1,6 @@
 import React from "react";
 import classes from './MealItem.module.css';
+import MealItemForm from "./MealItemForm";
 
 const MealItem = (props) => {
     const price = `Rs.${props.price.toFixed(2)}` // toFixed(2) Number of digits after decimal point. Must be in the range 0-20 and return a string representing a number in fixed-point notation
@@ -11,7 +12,9 @@ const MealItem = (props) => {
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
       </div>
-      <div></div>
+      <div>
+        <MealItemForm />
+      </div>
     </li>
   );
 };

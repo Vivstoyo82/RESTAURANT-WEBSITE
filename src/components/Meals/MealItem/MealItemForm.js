@@ -17,7 +17,7 @@ const MealItemForm = (props) => {
 
   return (
     <form className={classes.form}>
-      {console.log(cartcntx)}
+      {/* {console.log(cartcntx)} */}
       <Input
         label="Amount"
         input={{

@@ -8,7 +8,8 @@ const Header = (props) => {
     <Fragment>
         <header className={classes.header}>
             <h1>React Meals</h1>
-            <HeaderCartButton />
+            {/* here below using onClick we are passing a pointer in HeaderCartButton with any name we can use onPass also whatever we want here we are using name onCLick */}
+            <HeaderCartButton onClick={props.onShowCart} />
         </header>
         <div className={classes['main-image']}>
             <img src={mealsImage} alt="A vessel full of delicious food!" />

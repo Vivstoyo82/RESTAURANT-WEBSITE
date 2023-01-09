@@ -3,7 +3,8 @@ import CartIcon from "../Cart/CartIcon";
 import classes from './HeaderCartButton.module.css'
 
 const HeaderCartButton = (props) => {
-    return <button className={classes.button}>
+    // here below onClick is not a name its a real onClick btn
+    return <button className={classes.button} onClick={props.onClick}> 
         <span className={classes.icon}>
             <CartIcon />
         </span>

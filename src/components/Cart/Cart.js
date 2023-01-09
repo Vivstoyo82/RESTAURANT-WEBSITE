@@ -15,7 +15,7 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
@@ -23,7 +23,9 @@ const Cart = (props) => {
         {/* Here above we have right 985 amount as hard coded but later we will derive dynamically */}
       </div>
       <div className={classes.actions}>
-        <button className={classes["button--alt"]}>Close</button>
+        <button className={classes["button--alt"]} onClick={props.onClose}>
+          Close
+        </button>
         <button className={classes.button}>Order</button>
       </div>
     </Modal>

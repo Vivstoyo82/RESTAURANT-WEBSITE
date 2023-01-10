@@ -35,17 +35,18 @@ const CartProvider = (props) => {
       return ele.id === id;
     });
     let existingItem = items[idx];
-    if (existingItem.quantity === 1) 
+    if (existingItem.quantity === 1 || existingItem.quantity === 0) 
     {
       items.splice(idx, 1);
       updateItems([...items]);
     } 
     else
     {
+      console.log(existingItem)
       let obj = 
       {
         ...existingItem,
-        quantity: existingItem.quantity - 1,
+        quantity: existingItem.quantity -1,
       };
       items[idx] = obj;
       updateItems([...items]);
